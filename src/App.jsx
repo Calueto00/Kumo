@@ -7,17 +7,16 @@ import Plans from './components/Plans';
 import About from './components/About';
 import Mission from './components/Mission';
 import Cta from './components/Cta';
-import Why from './components/Why';
+
 
 export default function App() {
 
   return(
-    <div>
+    <div className='bg-[#0F3262]'>
       <HeaderSection />
       <Hero />
       <About />
       <Service />
-      <Why />
       <Mission />
       <Plans />
       <Cta />

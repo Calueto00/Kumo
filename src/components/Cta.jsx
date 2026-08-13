@@ -1,13 +1,15 @@
-
+function ArrowIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>;
+}
 
 export default function Cta() {
-    return(
-        <section id="cta" className="bg-zinc-900 text-white py-20">
-            <div className="container mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">Pronto para impulsionar seu negócio?</h2>
-                <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto">Entre em contato conosco hoje mesmo e descubra como nossas soluções tecnológicas podem transformar sua empresa.</p>
-                <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300">Fale Conosco</a>
-            </div>
-        </section>
-    )
-}  
+  return (
+    <section id="cta" className="cta-section">
+      <div className="cta-orbit orbit-left" /><div className="cta-orbit orbit-right" />
+      <div className="cta-shell">
+        <div><span className="cta-kicker">O próximo passo começa aqui</span><h2>Pronto para impulsionar o seu negócio?</h2><p>Fale connosco e descubra como as nossas soluções tecnológicas podem transformar a sua empresa.</p></div>
+        <a href="#contact" className="cta-button">Fale connosco <ArrowIcon /></a>
+      </div>
+    </section>
+  );
+}

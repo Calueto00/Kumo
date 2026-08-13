@@ -1,11 +1,33 @@
+import digitalLayers from '../assets/hero.png';
 
+function ArrowIcon() {
+  return <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>;
+}
 
 export default function Hero() {
-    return(
-        <section id="hero" className="bg-zinc-900 text-white h-screen flex flex-col justify-center items-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Bem-vindo ao Kumo</h1>
-            <p className="text-lg md:text-xl mb-8 text-center max-w-xl">A Kumo é uma empresa de tecnologia que oferece soluções inovadoras para o seu negócio. Descubra como podemos ajudá-lo a crescer e se destacar no mercado.</p>
-            <a href="#about" className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300">Saiba mais</a>
-        </section>
-    )
+  return (
+    <section id="hero" className="hero-section">
+      <div className="hero-glow glow-one" />
+      <div className="hero-glow glow-two" />
+      <div className="hero-shell">
+        <div className="hero-content">
+          <span className="hero-kicker"><span />Soluções digitais para crescer</span>
+          <h1>A primeira impressão conta. <em>Faça com que ela seja memorável.</em></h1>
+          <p>Criamos soluções digitais modernas que ajudam empresas a crescer, fortalecer a sua marca e conquistar mais clientes.</p>
+          <div className="hero-actions">
+            <a className="hero-primary" href="#contact">Começar um projeto <ArrowIcon /></a>
+            <a className="hero-secondary" href="#services">Ver serviços <span>↓</span></a>
+          </div>
+          <div className="hero-trust"><span className="trust-check">✓</span> Tecnologia, estratégia e acompanhamento num só lugar.</div>
+        </div>
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-disc" />
+          <div className="hero-ring ring-a" /><div className="hero-ring ring-b" />
+          <img src={digitalLayers} alt="" />
+          <div className="hero-float float-top"><span className="float-icon">↗</span><div><strong>Presença digital</strong><small>que gera confiança</small></div></div>
+          <div className="hero-float float-bottom"><span className="pulse-dot" /><div><strong>Sempre online</strong><small>rápido e seguro</small></div></div>
+        </div>
+      </div>
+    </section>
+  );
 }
